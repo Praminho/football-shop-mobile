@@ -39,7 +39,9 @@ A new Flutter project.
 
 5.  Apa itu BuildContext dan mengapa penting di Flutter? Bagaimana penggunaannya di metode build?
 
+    Buildcontext berfungsi sebagai objek yang merepresentasikan posisi sebuah widget dalam widget tree. Hal ini penting karena Buildcontext dapat menghubungkan widget dengan parentnya agar data dari parent dapat diakses.
 
+    penggunaannya dengan metode build adalah menghubungkan tiap widget dengan parentnya, contohnya di menu.dart menghubungkan widget MyHomePage, Card, dan Material. Perannya seperti denah yang menunjuk arah ke tiap widget.
 
 6.  Jelaskan konsep "hot reload" di Flutter dan bagaimana bedanya dengan "hot restart".
 
