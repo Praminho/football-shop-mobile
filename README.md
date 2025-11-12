@@ -49,6 +49,37 @@ A new Flutter project.
 
     Konsep hot restart di flutter adalah ketika kode di load dan diganti melalui VM `dan melakukan restart aplikasi flutter dan menghilangkan state aplikasi.`
 
+## Tugas 8
+1.  Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement() pada Flutter. Dalam kasus apa sebaiknya masing-masing digunakan pada aplikasi Football Shop kamu?
+
+    Navigator.push() adalah method yang menambahkan suatu route dalam stack yang dikelola oleh navigator. Route ini akan ditambahkan ke paling atas stack sehingga route yang baru ditambahkan langsung muncul ke pengguna. Contoh penggunaannya adalah pada product card yang akan terus menambah card baru tanpa mengganti yang sudah di simpan sebelumnya
+
+    Navigator.pushReplacement() adalah method yang cara kerjanya mirip dengan push, bedanya jika push biasa hanya akan menambahkan yang baru, pushReplacement akan mengganti route sebelumnya dengan route terbaru. Contohnya adalah pada tombol home di drawer yang mengembalikan ke home tanpa memencet "back"
+
+2. Bagaimana kamu memanfaatkan hierarchy widget seperti Scaffold, AppBar, dan Drawer untuk membangun struktur halaman yang konsisten di seluruh aplikasi?
+
+    Scaffold digunakan sebagai rangka dari halaman yang ada di `menu.dart`. `productlist_form.dart` digunakan untuk struktur design standar `appBar`, `body`, dan `endDrawer`. Appbar dan drawer menjadi menu navigasi yang diatur scaffold.
+
+3. Dalam konteks desain antarmuka, apa kelebihan menggunakan layout widget seperti Padding, SingleChildScrollView, dan ListView saat menampilkan elemen-elemen form? Berikan contoh penggunaannya dari aplikasi kamu.
+
+    Padding membantu user untuk lebih dapat membaca berbagai fitur dengan menggunakan "jarak". Hal ini dilakukan agar fitur fitur tersebut tidak berdempetan atau menempel satu sama lain
+
+    SingleChildScrollView berfungsi sebagai form yang perlu melakukan scroll yang banyak. Konsepnya konten yang panjang ketika di scroll saat melebihi ukuran layar dapat dicegah overvlow error pada layar kecil. Fitur ini diimplementasikan pada semua input fields yang mencakup nama, harga, deskripsi, kategori, thumbnail, dan sebagainya. Hal ini memastikan user dapat mengakses semua field meskipun tinggi konten melebihi tinggi layar.
+
+    ListView berguna untuk menampilkan list item yang panjang hingga perlu discroll. ListView digunakan di drawer agar header dan tiap ListTiledapat discroll dengan ukuran layar yang terbatas.
+
+4. Bagaimana kamu menyesuaikan warna tema agar aplikasi Football Shop memiliki identitas visual yang konsisten dengan brand toko?
+   
+    Saya menggunakan warna orange untuk toko yang saya ubah di main.dart 
+   
+    ```             colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.orange)
+          .copyWith(
+            primary: Colors.orange[700],
+            secondary: Colors.orangeAccent[400],
+          )```
+
+   Hal ini membuat widget widget lain mengikuti warna orange ini 
+
 
 ## Getting Started
 
