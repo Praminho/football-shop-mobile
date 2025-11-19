@@ -22,6 +22,8 @@ class MyHomePage extends StatelessWidget {
     ItemHomepage("All Products", Icons.menu_rounded, Colors.blue),
     ItemHomepage("My Products", Icons.person, Colors.green),
     ItemHomepage("Create Products", Icons.my_library_add, Colors.red),
+    ItemHomepage("Logout", Icons.my_library_add, Colors.purple),
+    
   ];
 
   @override
@@ -72,7 +74,15 @@ class MyHomePage extends StatelessWidget {
                                   const ProductEntryListPage(onlyMine: true),
                               ),
                             );
-                          } else {
+                          } else if (item.name == "Logout") {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                  const ProductEntryListPage(onlyMine: true),
+                              ),
+                            );
+                            }else {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
