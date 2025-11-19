@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:football_shop/widgets/left_drawer.dart';
 import 'package:football_shop/screens/product_entry_list.dart';
+import 'package:football_shop/screens/productlist_form.dart';
 
 class ItemHomepage {
   final String name;
@@ -72,11 +73,14 @@ class MyHomePage extends StatelessWidget {
                               ),
                             );
                           } else {
-                            ScaffoldMessenger.of(context)
-                              ..hideCurrentSnackBar()
-                              ..showSnackBar(const SnackBar(
-                                content: Text("Kamu telah menekan tombol Create Products!")));
-                            // Routing buat create/sesuai kebutuhan Anda
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                  const ProductFormPage(),
+                              ),
+                            );
+
                           }
                         },
                         child: SizedBox(
